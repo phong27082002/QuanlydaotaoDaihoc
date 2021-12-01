@@ -1,0 +1,26 @@
+public class Student {
+	String name;
+	String ID = "";
+	String admissionYear;
+	List<String> subject = new ArrayList<>();
+	int accountBalance;
+	int moneyIn;
+	
+    private static final String digits = "0123456789"; 
+	Random rand = new Random();
+	
+	Scanner ip = new Scanner(System.in);
+	
+	public void inputInfo() {
+		System.out.println("Enter name: ");
+		name = ip.nextLine();
+		while(true) {
+                    System.out.println("Enter addmission year: ");
+                    String admissionYearInput = ip.nextLine();
+                    if(setAdmissionYear(admissionYearInput)) {
+                        break;
+                    }
+		}
+		System.out.println("Nap tien lan dau: ");
+		accountBalance = Integer.parseInt(ip.nextLine());
+	}
