@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="QLDT">
+  <ClassDiagramComponents>
+    <Class name="Admin" package="com.mycompany.entyti" visibility="public" xPosition="561.0" yPosition="386.0">
+      <Fields>
+        <Field name="tk" type="String" visibility="private"/>
+        <Field name="mk" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tk"/>
+          <Argument type="String" name="mk"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Diem" package="com.mycompany.entyti" visibility="public" xPosition="154.0" yPosition="506.0">
+      <Fields>
+        <Field name="maSV" type="String" visibility="private"/>
+        <Field name="diemHeso" type="String" visibility="private"/>
+        <Field name="diemHechu" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="maSV"/>
+          <Argument type="String" name="diemHeso"/>
+          <Argument type="String" name="diemHechu"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="GiaoVien" package="com.mycompany.entyti" visibility="public" xPosition="1086.0" yPosition="51.0">
+      <Fields>
+        <Field name="maGV" type="String" visibility="private"/>
+        <Field name="tenGV" type="String" visibility="private"/>
+        <Field name="mk" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="maGV"/>
+          <Argument type="String" name="tenGV"/>
+          <Argument type="String" name="gioiTinh"/>
+          <Argument type="String" name="khoa"/>
+          <Argument type="String" name="diaChi"/>
+          <Argument type="String" name="sdt"/>
+          <Argument type="String" name="mk"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Khoa" package="com.mycompany.entyti" visibility="public" xPosition="154.0" yPosition="63.0">
+      <Fields>
+        <Field name="makhoa" type="String" visibility="private"/>
+        <Field name="tenkhoa" type="String" visibility="private"/>
+        <Field name="sdt" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="makhoa"/>
+          <Argument type="String" name="tenkhoa"/>
+          <Argument type="String" name="sdt"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="LopHoc" package="com.mycompany.entyti" visibility="public" xPosition="154.0" yPosition="283.0">
+      <Fields>
+        <Field name="tenlop" type="String" visibility="private"/>
+        <Field name="siso" type="String" visibility="private"/>
+        <Field name="Khoa" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tenlop"/>
+          <Argument type="String" name="siso"/>
+          <Argument type="String" name="Khoa"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="NguoiDung" package="com.mycompany.entyti" visibility="public" xPosition="561.0" yPosition="143.0">
+      <Fields>
+        <Field name="gioiTinh" type="String" visibility="package"/>
+        <Field name="khoa" type="String" visibility="package"/>
+        <Field name="diaChi" type="String" visibility="package"/>
+        <Field name="sdt" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="gioiTinh"/>
+          <Argument type="String" name="khoa"/>
+          <Argument type="String" name="diaChi"/>
+          <Argument type="String" name="sdt"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="SinhVien" package="com.mycompany.entyti" visibility="public" xPosition="1086.0" yPosition="283.0">
+      <Fields>
+        <Field name="maSV" type="String" visibility="private"/>
+        <Field name="tenSV" type="String" visibility="private"/>
+        <Field name="ngaySinh" type="String" visibility="private"/>
+        <Field name="mk" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="maSV"/>
+          <Argument type="String" name="tenSV"/>
+          <Argument type="String" name="gioiTinh"/>
+          <Argument type="String" name="ngaySinh"/>
+          <Argument type="String" name="khoa"/>
+          <Argument type="String" name="diaChi"/>
+          <Argument type="String" name="sdt"/>
+          <Argument type="String" name="mk"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="com.mycompany.entyti.SinhVien" target="com.mycompany.entyti.NguoiDung"/>
+    <IsRelation name="is" source="com.mycompany.entyti.GiaoVien" target="com.mycompany.entyti.NguoiDung"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
